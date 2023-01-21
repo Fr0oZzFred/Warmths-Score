@@ -33,7 +33,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_fd01eb3fcc3a4626a0fcd3a390bcad4c_Out_0:
-        m_Texture: {fileID: 2800000, guid: 07cf2f7d2d1fa354991060ef44a49929, type: 3}
+        m_Texture: {fileID: 2800000, guid: 13c28073f6fa6264c9dd5125e47f7b8a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_192bb9738dfb4d36b4cd5724be9fb959_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_586e9c4762a6463d924c88f6ef2560e0_Texture_1:
+        m_Texture: {fileID: 2800000, guid: c8eab9a7fe004d74daec87fae3484aa1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -53,7 +61,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _TransitionColor: {r: 1, g: 0, b: 0, a: 0}
+    - _TransitionColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &2910372090699605161
 MonoBehaviour:
