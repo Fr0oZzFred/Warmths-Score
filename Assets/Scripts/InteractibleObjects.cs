@@ -12,4 +12,7 @@ public class InteractibleObjects : MonoBehaviour {
 
         gameObject.SetActive(false);
     }
+    public void TryToWearWater(int index) {
+        if (!GameManager.Instance.Player.WearItem(index)) return;
+    }
 }
