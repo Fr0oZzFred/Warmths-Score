@@ -28,6 +28,9 @@ public class WorldManager : MonoBehaviour {
             case 3:
                 events[0].Invoke();
             break;
+            case 4:
+                events[1].Invoke();
+            break;
         }
     }
 }

@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
         animator.SetFloat("Horizontal", horizontal);
-        animator.SetFloat("Vertical", vertical - 0.01f);
+        animator.SetFloat("Vertical", vertical);
     }
 
     void FixedUpdate() {
@@ -32,6 +32,10 @@ public class PlayerController : MonoBehaviour {
     }
 
     public bool WearItem(int index) {
+        if(WearingItem == 3 && index == 4) {
+            WearingItem = index;
+            return true;
+        }
         if (WearingItem > -1) return false;
 
 

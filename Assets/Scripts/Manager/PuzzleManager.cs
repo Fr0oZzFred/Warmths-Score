@@ -20,8 +20,6 @@ public class PuzzleManager : MonoBehaviour
     private void Awake() {
         if (!Instance) Instance = this;
     }
-    private void OnMouseDown() {
-    }
     public void UnWearPlayer() {
         GameManager.Instance.Player.UnWear();
     }
