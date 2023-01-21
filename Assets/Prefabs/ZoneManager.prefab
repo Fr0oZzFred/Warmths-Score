@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   center: {fileID: 0}
   radius: 3
-  edgeWidth: 0
-  noiseScale: 0.28
-  radiusNoiseOffset: 0.03
+  edgeWidth: 0.01
+  noiseScale: 1
+  radiusNoiseOffset: 0.04
