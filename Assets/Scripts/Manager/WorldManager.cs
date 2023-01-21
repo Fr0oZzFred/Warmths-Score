@@ -16,6 +16,18 @@ public class WorldManager : MonoBehaviour {
     public void SetGameProgression(int nuProgression) {
         if (nuProgression <= GameProgression) return;
         GameProgression = nuProgression;
-        events[GameProgression].Invoke();
+        OnProgressionChange();
+    }
+    public void IncrProgression() {
+        GameProgression++;
+        OnProgressionChange();
+    }
+
+    void OnProgressionChange() {
+        switch (GameProgression) {
+            case 3:
+                events[0].Invoke();
+            break;
+        }
     }
 }

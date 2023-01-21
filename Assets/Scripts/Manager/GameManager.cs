@@ -12,8 +12,11 @@ public class GameManager : MonoBehaviour {
     public delegate void GameStateChangeHandler(GameStates newState);
     public event GameStateChangeHandler OnGameStateChanged;
 
+    [SerializeField] PlayerController player;
+    public PlayerController Player { get; private set; }
     private void Awake() {
         if (!Instance) Instance = this;
+        Player = player;
     }
     private void Start() {
         SetState(GameStates.MainMenu);
