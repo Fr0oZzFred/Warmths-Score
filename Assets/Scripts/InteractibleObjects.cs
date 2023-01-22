@@ -19,6 +19,7 @@ public class InteractibleObjects : MonoBehaviour {
         TryCreatePrefab();
     }
     public void TryToWearWater(int index) {
+        if (GameManager.Instance.Player.WearingItem != 3) return;
         if (!GameManager.Instance.Player.WearItem(index)) return;
 
         GameManager.Instance.Player.tongue.FirstPrefab = GameManager.Instance.Player.grabbedOBJ;

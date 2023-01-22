@@ -40,4 +40,7 @@ public class GameManager : MonoBehaviour {
     public void SetState(int newState) {
         SetState((GameStates)newState);
     }
+    public void QuitGame() {
+        Application.Quit();
+    }
 }

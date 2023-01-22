@@ -26,7 +26,10 @@ public class PlayerController : MonoBehaviour {
         animator.SetFloat("Horizontal", horizontal);
         animator.SetFloat("Vertical", vertical);
 
-        if (grabbedOBJ) grabbedOBJ.transform.position = grabbedOBJPos.position;
+        if (grabbedOBJ) {
+            grabbedOBJ.transform.position = grabbedOBJPos.position;
+            grabbedOBJ.GetComponent<SpriteRenderer>().sortingOrder = gameObject.GetComponent<SpriteRenderer>().sortingOrder;
+        }
     }
 
     void FixedUpdate() {

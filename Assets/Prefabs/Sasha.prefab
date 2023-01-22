@@ -89,7 +89,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &8535721401475467695
 Animator:
   serializedVersion: 4
@@ -252,6 +252,7 @@ MonoBehaviour:
   line: {fileID: 3066229064696794142}
   delay: 0.000001
   GrabedPrefab: {fileID: 0}
+  FirstPrefab: {fileID: 0}
 --- !u!120 &3066229064696794142
 LineRenderer:
   m_ObjectHideFlags: 0
