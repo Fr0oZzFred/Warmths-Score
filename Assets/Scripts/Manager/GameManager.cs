@@ -30,10 +30,12 @@ public class GameManager : MonoBehaviour {
             case GameStates.InGame:
                 Player.enabled = true;
                 Player.tongue.enabled = true;
+                Player.dialogue.enabled = true;
                 break;
             default:
                 Player.enabled = false;
                 Player.tongue.enabled = false;
+                Player.dialogue.enabled = false;
                 break;
         }
     }

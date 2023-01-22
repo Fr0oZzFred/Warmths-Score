@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] Transform grabbedOBJPos;
     public GameObject grabbedOBJ = null;
     public Tongue tongue;
+    public Dialogue dialogue;
     Rigidbody2D rb;
     Animator animator;
     float horizontal;
