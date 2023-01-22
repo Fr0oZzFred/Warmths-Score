@@ -3,6 +3,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     [SerializeField] float speed = 3.0f;
+    [SerializeField] Transform grabbedOBJPos;
+    public GameObject grabbedOBJ = null;
+    public Tongue tongue;
     Rigidbody2D rb;
     Animator animator;
     float horizontal;
@@ -22,6 +25,8 @@ public class PlayerController : MonoBehaviour {
         diagonal = (Mathf.Abs(horizontal) >= 1.0f && Mathf.Abs(vertical) >= 1.0f);
         animator.SetFloat("Horizontal", horizontal);
         animator.SetFloat("Vertical", vertical);
+
+        if (grabbedOBJ) grabbedOBJ.transform.position = grabbedOBJPos.position;
     }
 
     void FixedUpdate() {
@@ -56,5 +61,6 @@ public class PlayerController : MonoBehaviour {
 
     public void UnWear() {
         WearingItem = -1;
+        Destroy(grabbedOBJ);
     }
 }

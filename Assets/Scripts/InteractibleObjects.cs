@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 public class InteractibleObjects : MonoBehaviour {
     [SerializeField] UnityEvent onClick;
+    [SerializeField] GameObject prefab = null;
     private void OnMouseDown() {
         Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         clickPos.z = 0;
@@ -15,8 +16,17 @@ public class InteractibleObjects : MonoBehaviour {
         if (!GameManager.Instance.Player.WearItem(index)) return;
 
         gameObject.SetActive(false);
+        TryCreatePrefab();
     }
     public void TryToWearWater(int index) {
         if (!GameManager.Instance.Player.WearItem(index)) return;
+
+        GameManager.Instance.Player.tongue.FirstPrefab = GameManager.Instance.Player.grabbedOBJ;
+        GameManager.Instance.Player.grabbedOBJ = null;
+        TryCreatePrefab();
+    }
+    void TryCreatePrefab() {
+        if (!prefab) return;
+        GameManager.Instance.Player.tongue.GrabedPrefab = Instantiate(prefab, this.transform.position, Quaternion.identity);
     }
 }

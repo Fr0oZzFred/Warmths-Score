@@ -7,7 +7,8 @@ public class Tongue : MonoBehaviour
     Vector3[] positions = new Vector3[2];
     bool coroutineRunnning;
     [SerializeField] float delay = 0.005f;
-
+    public GameObject GrabedPrefab = null;
+    public GameObject FirstPrefab = null;
     private void Start() {
         line.startWidth = 0.1f;
         line.endWidth = 0.2f;
@@ -33,17 +34,20 @@ public class Tongue : MonoBehaviour
         for (float t = 0; t <= 1.0f; t+= 0.05f) {
             positions[1] = Vector3.Lerp(positions[0], clickPos, t);
             line.SetPositions(positions);
-            positions[0].z = positions[1].z = 0f;
+            if (FirstPrefab) FirstPrefab.transform.position = positions[1];
             yield return new WaitForSecondsRealtime(delay);
         }
+
+        if (FirstPrefab) Destroy(FirstPrefab);
 
         for (float t = 1.0f; t >= 0.0f; t -= 0.05f) {
             positions[1] = Vector3.Lerp(positions[0], clickPos, t);
             line.SetPositions(positions);
-            positions[0].z = positions[1].z = 0f;
+            if (GrabedPrefab) GrabedPrefab.transform.position = positions[1];
             yield return new WaitForSecondsRealtime(delay);
         }
-
+        if (GrabedPrefab) GameManager.Instance.Player.grabbedOBJ = GrabedPrefab;
+        GrabedPrefab = null;
         line.enabled = false;
         GameManager.Instance.Player.enabled = true;
         coroutineRunnning = false;

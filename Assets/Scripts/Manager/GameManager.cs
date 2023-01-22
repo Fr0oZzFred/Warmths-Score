@@ -26,11 +26,18 @@ public class GameManager : MonoBehaviour {
         PreviousGameState = CurrentGameState;
         CurrentGameState = newState;
         OnGameStateChanged?.Invoke(newState);
+        switch (newState) {
+            case GameStates.InGame:
+                Player.enabled = true;
+                Player.tongue.enabled = true;
+                break;
+            default:
+                Player.enabled = false;
+                Player.tongue.enabled = false;
+                break;
+        }
     }
     public void SetState(int newState) {
-        if ((GameStates)newState == CurrentGameState) return;
-        PreviousGameState = CurrentGameState;
-        CurrentGameState = (GameStates)newState;
-        OnGameStateChanged?.Invoke((GameStates)newState);
+        SetState((GameStates)newState);
     }
 }
