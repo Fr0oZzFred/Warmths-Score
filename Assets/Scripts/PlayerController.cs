@@ -37,6 +37,11 @@ public class PlayerController : MonoBehaviour {
         rb.MovePosition(position);
     }
 
+    public void StopMovement() {
+        horizontal = vertical = 0;
+        enabled = false;
+    }
+
     public bool WearItem(int index) {
         if (WearingItem == 3 && index == 4) {
             WearingItem = index;

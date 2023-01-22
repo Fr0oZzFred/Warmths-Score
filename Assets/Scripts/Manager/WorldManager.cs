@@ -34,14 +34,23 @@ public class WorldManager : MonoBehaviour {
     }
     public void IncrSpawnPuzzleState() {
         spawnPuzzleState++;
-        if (spawnPuzzleState >= taskToDoPuzzleSpawn) onPuzzleCompleted[0].Invoke();
+        if (spawnPuzzleState >= taskToDoPuzzleSpawn) {
+            onPuzzleCompleted[0].Invoke();
+            IncrProgression();
+        }
     }
     public void IncrVille1PuzzleState() {
         ville1PuzzleState++;
-        if (ville1PuzzleState >= taskToDoPuzzleVille1) onPuzzleCompleted[1].Invoke();
+        if (ville1PuzzleState >= taskToDoPuzzleVille1) {
+            onPuzzleCompleted[1].Invoke();
+            IncrProgression();
+        }
     }
     public void IncrForetPuzzleState() {
         foretPuzzleState++;
-        if (foretPuzzleState >= taskToDoPuzzleForet) onPuzzleCompleted[2].Invoke();
+        if (foretPuzzleState >= taskToDoPuzzleForet) {
+            onPuzzleCompleted[2].Invoke();
+            IncrProgression();
+        }
     }
 }

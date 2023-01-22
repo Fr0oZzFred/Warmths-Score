@@ -3200,7 +3200,7 @@ GameObject:
   - component: {fileID: 1242382519}
   - component: {fileID: 1242382518}
   m_Layer: 0
-  m_Name: map nb
+  m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3226,7 +3226,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 2cac5e513c76b1245a22a1fb72fec283, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3247,7 +3247,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: d9fb26cf78002b740b25cba05c8c3fdb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3282433ca45901c4780fd1411e735769, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
