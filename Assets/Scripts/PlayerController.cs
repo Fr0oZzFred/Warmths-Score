@@ -19,9 +19,7 @@ public class PlayerController : MonoBehaviour {
     void Update() {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
-        if (horizontal >= 1.0f && vertical >= 1.0f) {
-            diagonal = true;
-        }
+        diagonal = (Mathf.Abs(horizontal) >= 1.0f && Mathf.Abs(vertical) >= 1.0f);
         animator.SetFloat("Horizontal", horizontal);
         animator.SetFloat("Vertical", vertical);
     }

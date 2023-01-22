@@ -4,7 +4,14 @@ using UnityEngine.Events;
 
 public class WorldManager : MonoBehaviour {
 
-    [SerializeField] List<UnityEvent> events;
+    [SerializeField] List<UnityEvent> onPuzzleCompleted;
+    [SerializeField] int taskToDoPuzzleSpawn = 3;
+    [SerializeField] int taskToDoPuzzleVille1 = 1;
+    [SerializeField] int taskToDoPuzzleForet = 3;
+
+    int spawnPuzzleState = 0;
+    int ville1PuzzleState = 0;
+    int foretPuzzleState = 0;
 
     public static WorldManager Instance { get; private set; }
 
@@ -24,13 +31,17 @@ public class WorldManager : MonoBehaviour {
     }
 
     void OnProgressionChange() {
-        switch (GameProgression) {
-            case 3:
-                events[0].Invoke();
-            break;
-            case 4:
-                events[1].Invoke();
-            break;
-        }
+    }
+    public void IncrSpawnPuzzleState() {
+        spawnPuzzleState++;
+        if (spawnPuzzleState >= taskToDoPuzzleSpawn) onPuzzleCompleted[0].Invoke();
+    }
+    public void IncrVille1PuzzleState() {
+        ville1PuzzleState++;
+        if (ville1PuzzleState >= taskToDoPuzzleVille1) onPuzzleCompleted[1].Invoke();
+    }
+    public void IncrForetPuzzleState() {
+        foretPuzzleState++;
+        if (foretPuzzleState >= taskToDoPuzzleForet) onPuzzleCompleted[2].Invoke();
     }
 }
