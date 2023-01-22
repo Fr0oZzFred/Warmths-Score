@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour {
     bool diagonal = false;
     public int WearingItem { get; private set; }
 
-
     void Start() {
         WearingItem = -1;
         rb = GetComponent<Rigidbody2D>();

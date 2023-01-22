@@ -43,4 +43,10 @@ public class ZoneManager : MonoBehaviour {
         Shader.SetGlobalFloat("_NoiseScale", debugZone.noiseScale);
         Shader.SetGlobalFloat("_RadiusNoiseOffset", debugZone.radiusNoiseOffset);
     }
+    public void SetIndex(int index) {
+        idx = index;
+    }
+    public void IncrIdx() {
+        idx++;
+    }
 }
