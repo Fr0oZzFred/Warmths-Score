@@ -12,7 +12,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] TextMeshProUGUI text;
     
     float time;
-    int idx = 0;
+    int idx = -1;
 
 
     private void Start() {
@@ -23,6 +23,7 @@ public class Dialogue : MonoBehaviour
         time += Time.deltaTime;
         if(timeBetweenDialogue < time) {
             time = 0;
+            if (idx == WorldManager.Instance.GameProgression) return;
             switch (WorldManager.Instance.GameProgression) {
                 case 0:
                     StartCoroutine(ShowDialogue(1));
@@ -37,6 +38,7 @@ public class Dialogue : MonoBehaviour
                     StartCoroutine(ShowDialogue(4));
                     break;
             }
+            idx = WorldManager.Instance.GameProgression;
         }
     }
     IEnumerator ShowDialogue(int idx) {
