@@ -7,7 +7,7 @@ public class WorldManager : MonoBehaviour {
     [SerializeField] List<UnityEvent> onPuzzleCompleted;
     [SerializeField] int taskToDoPuzzleSpawn = 3;
     [SerializeField] int taskToDoPuzzleVille1 = 1;
-    [SerializeField] int taskToDoPuzzleForet = 3;
+    [SerializeField] int taskToDoPuzzleForet = 4;
 
     int spawnPuzzleState = 0;
     int ville1PuzzleState = 0;

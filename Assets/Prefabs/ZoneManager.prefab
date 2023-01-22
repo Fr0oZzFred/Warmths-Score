@@ -44,8 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572c836278732c74b896050a309d5135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 1
   center: {fileID: 0}
-  radius: 3
-  edgeWidth: 0.01
-  noiseScale: 1
-  radiusNoiseOffset: 0.04
+  debugZone:
+    radius: 3
+    edgeWidth: 0.01
+    noiseScale: 1
+    radiusNoiseOffset: 0.04
+  presets:
+  - radius: 0
+    edgeWidth: 0
+    noiseScale: 0
+    radiusNoiseOffset: 0.01

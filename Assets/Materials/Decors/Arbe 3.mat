@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Grabbed Bois 2
+  m_Name: Arbe 3
   m_Shader: {fileID: -6465566751694194690, guid: 18775949333eef945a486517190a3bfd, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _InnerTex:
-        m_Texture: {fileID: 2800000, guid: aba6b06d75aa7e44db229b8287f81e99, type: 3}
+        m_Texture: {fileID: 2800000, guid: 024f9b499880d7144896772f47ec14a6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OuterTex:
-        m_Texture: {fileID: 2800000, guid: 037e1eeb3d2c145408d5f6e18bd5dbc1, type: 3}
+        m_Texture: {fileID: 2800000, guid: ae61dab281060fc40a71a6cb018c74ef, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_fd01eb3fcc3a4626a0fcd3a390bcad4c_Out_0:

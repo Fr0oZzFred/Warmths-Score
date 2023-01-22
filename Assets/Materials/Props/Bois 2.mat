@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bois
+  m_Name: Bois 2
   m_Shader: {fileID: -6465566751694194690, guid: af3f70fd4fbc4794bb60d07d6452faab, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OuterTex:
-        m_Texture: {fileID: 2800000, guid: e6060ee88c892694dbb6cd3ea553e347, type: 3}
+        m_Texture: {fileID: 2800000, guid: 037e1eeb3d2c145408d5f6e18bd5dbc1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_fd01eb3fcc3a4626a0fcd3a390bcad4c_Out_0:
