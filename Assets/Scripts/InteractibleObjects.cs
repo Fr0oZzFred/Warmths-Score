@@ -9,9 +9,9 @@ public class InteractibleObjects : MonoBehaviour {
         clickPos.z = 0;
         Vector3 d = clickPos - GameManager.Instance.Player.transform.position;
         if (d.magnitude < ZoneManager.Instance.Radius) return;
+        if (ZoneManager.Instance.idx == 0) return;
         onClick.Invoke();
     }
-
     public void TryToWear(int index) {
         if (!GameManager.Instance.Player.WearItem(index)) return;
 

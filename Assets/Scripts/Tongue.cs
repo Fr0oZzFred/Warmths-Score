@@ -25,6 +25,7 @@ public class Tongue : MonoBehaviour
         clickPos.z = 0;
         Vector3 d = clickPos - GameManager.Instance.Player.transform.position;
         if (d.magnitude < ZoneManager.Instance.Radius) yield break;
+        if (ZoneManager.Instance.idx == 0) yield break;
 
         coroutineRunnning = true;
         GameManager.Instance.Player.StopMovement();

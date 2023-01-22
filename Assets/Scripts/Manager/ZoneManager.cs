@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class ZoneManager : MonoBehaviour {
 
@@ -24,14 +25,18 @@ public class ZoneManager : MonoBehaviour {
 
     public List<Zone> presets;
 
-    int idx = 0;
+    public int idx = 0;
+
+    [SerializeField] float delay = 0.005f;
+    float radius;
     public float Radius { get { return presets[idx].radius; } }
     private void Awake() {
         if (!Instance) Instance = this;
+        radius = presets[0].radius;
     }
     void Update() {
         Shader.SetGlobalVector("_Position", center.position);
-        Shader.SetGlobalFloat("_Radius", presets[idx].radius);
+        Shader.SetGlobalFloat("_Radius", radius);
         Shader.SetGlobalFloat("_EdgeWidth", presets[idx].edgeWidth);
         Shader.SetGlobalFloat("_NoiseScale", presets[idx].noiseScale);
         Shader.SetGlobalFloat("_RadiusNoiseOffset", presets[idx].radiusNoiseOffset);
@@ -48,5 +53,24 @@ public class ZoneManager : MonoBehaviour {
     }
     public void IncrIdx() {
         idx++;
+        if (idx >= presets.Count) return;
+        if(idx == (presets.Count - 1)) {
+            StartCoroutine(LerpSlow());
+            return;
+        }
+        StartCoroutine(Lerp());
+    }
+
+    IEnumerator Lerp() {
+        for (float t = 0; t <= 1.0f; t += 0.01f) {
+            radius = Mathf.Lerp(presets[idx - 1].radius, presets[idx].radius, t);
+            yield return new WaitForSecondsRealtime(delay);
+        }
+    }
+    IEnumerator LerpSlow() {
+        for (float t = 0; t <= 1.0f; t += 0.0001f) {
+            radius = Mathf.Lerp(presets[idx - 1].radius, presets[idx].radius, t);
+            yield return new WaitForSecondsRealtime(delay);
+        }
     }
 }
