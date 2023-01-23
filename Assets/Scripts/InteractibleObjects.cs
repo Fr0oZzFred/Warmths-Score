@@ -4,9 +4,21 @@ using UnityEngine.Events;
 public class InteractibleObjects : MonoBehaviour {
     [SerializeField] UnityEvent onClick;
     [SerializeField] GameObject prefab = null;
+    [SerializeField] bool water = false;
 
     private void OnMouseDown() {
-        if (GameManager.Instance.CurrentGameState != GameManager.GameStates.InGame) return;
+        
+        if (GameManager.Instance.CurrentGameState != GameManager.GameStates.InGame) return; 
+        
+        if (water) {
+            if (ZoneManager.Instance.idx == 0) return;
+            if (GameManager.Instance.Player.WearingItem != 3) return;
+            onClick.Invoke();
+            Cursor.SetCursor(GameManager.Instance.NormalCursor, Vector2.zero, CursorMode.ForceSoftware);
+            return;
+        }
+
+
         Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         clickPos.z = 0;
         Vector3 d = clickPos - GameManager.Instance.Player.transform.position;
@@ -17,6 +29,14 @@ public class InteractibleObjects : MonoBehaviour {
     }
     private void OnMouseOver() {
         if (GameManager.Instance.CurrentGameState != GameManager.GameStates.InGame) return;
+
+        if (water) {
+            if (ZoneManager.Instance.idx == 0) return;
+            if (GameManager.Instance.Player.WearingItem != 3) return;
+            Cursor.SetCursor(GameManager.Instance.TongueCursor, Vector2.zero, CursorMode.ForceSoftware);
+            return;
+        }
+
         Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         clickPos.z = 0;
         Vector3 d = clickPos - GameManager.Instance.Player.transform.position;

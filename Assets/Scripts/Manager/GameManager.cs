@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
@@ -62,5 +62,8 @@ public class GameManager : MonoBehaviour {
     }
     public void QuitGame() {
         Application.Quit();
+    }
+    public void Reload(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

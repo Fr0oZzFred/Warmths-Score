@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572c836278732c74b896050a309d5135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finalTimeline: {fileID: 0}
   debug: 0
   center: {fileID: 0}
   debugZone:
@@ -76,7 +77,7 @@ MonoBehaviour:
     edgeWidth: 0.01
     noiseScale: 1
     radiusNoiseOffset: 0.015
-  - radius: 100
+  - radius: 120
     edgeWidth: 0.01
     noiseScale: 1
     radiusNoiseOffset: 0.01

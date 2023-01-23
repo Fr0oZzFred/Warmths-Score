@@ -5,6 +5,7 @@ using System.Collections;
 public class ZoneManager : MonoBehaviour {
 
     public static ZoneManager Instance { get; private set; }
+    [SerializeField] GameObject finalTimeline;
     [SerializeField] bool debug = true;
     [SerializeField] Transform center;
     //[SerializeField] [Min(0.01f)]           float radius = 3.0f;
@@ -56,6 +57,7 @@ public class ZoneManager : MonoBehaviour {
         if (idx >= presets.Count) return;
         if(idx == (presets.Count - 1)) {
             StartCoroutine(LerpSlow());
+            finalTimeline.SetActive(true);
             return;
         }
         StartCoroutine(Lerp());
@@ -68,7 +70,7 @@ public class ZoneManager : MonoBehaviour {
         }
     }
     IEnumerator LerpSlow() {
-        for (float t = 0; t <= 1.0f; t += 0.0001f) {
+        for (float t = 0; t <= 1.0f; t += 0.00005f) {
             radius = Mathf.Lerp(presets[idx - 1].radius, presets[idx].radius, t);
             yield return new WaitForSeconds(delay);
         }

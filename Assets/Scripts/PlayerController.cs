@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour {
         animator = GetComponent<Animator>();
     }
     void Update() {
+        if (GameManager.Instance.CurrentGameState != GameManager.GameStates.InGame) return;
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
         diagonal = ((Mathf.Abs(horizontal) >= 1.0f) && (Mathf.Abs(vertical) >= 1.0f));
