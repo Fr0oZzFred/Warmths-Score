@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour {
         Player = player;
     }
     private void Start() {
-        Cursor.SetCursor(GameManager.Instance.NormalCursor, Vector2.zero, CursorMode.ForceSoftware);
+        Cursor.SetCursor(NormalCursor, Vector2.zero, CursorMode.ForceSoftware);
         SetState(GameStates.MainMenu);
     }
     public void SetState(GameStates newState) {
