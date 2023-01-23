@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class InteractibleObjects : MonoBehaviour {
     [SerializeField] UnityEvent onClick;
     [SerializeField] GameObject prefab = null;
+
     private void OnMouseDown() {
         Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         clickPos.z = 0;
@@ -11,6 +12,18 @@ public class InteractibleObjects : MonoBehaviour {
         if (d.magnitude < ZoneManager.Instance.Radius) return;
         if (ZoneManager.Instance.idx == 0) return;
         onClick.Invoke();
+        Cursor.SetCursor(GameManager.Instance.NormalCursor, Vector2.zero, CursorMode.ForceSoftware);
+    }
+    private void OnMouseOver() {
+        Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        clickPos.z = 0;
+        Vector3 d = clickPos - GameManager.Instance.Player.transform.position;
+        if (d.magnitude < ZoneManager.Instance.Radius) return;
+        if (ZoneManager.Instance.idx == 0) return;
+        Cursor.SetCursor(GameManager.Instance.TongueCursor, Vector2.zero,CursorMode.ForceSoftware);
+    }
+    private void OnMouseExit() {
+        Cursor.SetCursor(GameManager.Instance.NormalCursor, Vector2.zero, CursorMode.ForceSoftware);
     }
     public void TryToWear(int index) {
         if (!GameManager.Instance.Player.WearItem(index)) return;

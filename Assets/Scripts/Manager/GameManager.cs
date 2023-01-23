@@ -14,11 +14,17 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField] PlayerController player;
     public PlayerController Player { get; private set; }
+
+
+    public Texture2D TongueCursor;
+    public Texture2D NormalCursor;
+
     private void Awake() {
         if (!Instance) Instance = this;
         Player = player;
     }
     private void Start() {
+        Cursor.SetCursor(GameManager.Instance.NormalCursor, Vector2.zero, CursorMode.ForceSoftware);
         SetState(GameStates.MainMenu);
     }
     public void SetState(GameStates newState) {

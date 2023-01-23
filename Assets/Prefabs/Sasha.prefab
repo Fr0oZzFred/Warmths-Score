@@ -111,6 +111,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6143171866222057994}
   - component: {fileID: 2987255178115350348}
+  - component: {fileID: 6139745581011106784}
+  - component: {fileID: 5551051387780094721}
   m_Layer: 0
   m_Name: Bulle
   m_TagString: Untagged
@@ -125,7 +127,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2189025852438560827}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -186,6 +188,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!320 &6139745581011106784
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2189025852438560827}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 063b146d47208ae41bd81fc42b4aecc0, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 6446494884619866789, guid: 063b146d47208ae41bd81fc42b4aecc0, type: 2}
+    value: {fileID: 5551051387780094721}
+  - key: {fileID: 3194692866666956104, guid: 063b146d47208ae41bd81fc42b4aecc0, type: 2}
+    value: {fileID: 2189025852438560827}
+  m_ExposedReferences:
+    m_References: []
+--- !u!95 &5551051387780094721
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2189025852438560827}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4695725800722644329
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +564,7 @@ MonoBehaviour:
   - 5
   - 5
   - 5
-  timeBetweenDialogue: 30
+  timeBetweenDialogue: 10
   bulle: {fileID: 2189025852438560827}
   text: {fileID: 1331006231433432637}
 --- !u!1 &7738142428127673090
