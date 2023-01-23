@@ -9,9 +9,9 @@ public class WorldManager : MonoBehaviour {
     [SerializeField] int taskToDoPuzzleVille1 = 1;
     [SerializeField] int taskToDoPuzzleForet = 4;
 
-    int spawnPuzzleState = 0;
-    int ville1PuzzleState = 0;
-    int foretPuzzleState = 0;
+    public int spawnPuzzleState = 0;
+    public int ville1PuzzleState = 0;
+    public int foretPuzzleState = 0;
 
     public static WorldManager Instance { get; private set; }
 

@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ae79166580701499f2eabe682aa95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
   grabbedOBJPos: {fileID: 1919194284683425190}
   grabbedOBJ: {fileID: 0}
   tongue: {fileID: 9021107259913916097}
@@ -553,12 +553,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - What happened here ?
-  - I should repair this bridge
-  - I should search some water, I can't wear Water
-  - I should light this campfire
-  - Among us
-  timeBetweenDialogue: 10
+  - The storm... It might've messed with the sacred score... All the colours are
+    gone !
+  - Oh no the bridge is broken !
+  - I should find some sticks
+  - I should go to north
+  - Maybe there is someone in the town
+  - I should fill the fountain
+  - I'm on a island, where is water nearby ?
+  - I should go to the campfire
+  - I need wood
+  - Woods should be in the wood
+  dialoguesDone: 
   bulle: {fileID: 2189025852438560827}
   text: {fileID: 1331006231433432637}
 --- !u!1 &7738142428127673090
