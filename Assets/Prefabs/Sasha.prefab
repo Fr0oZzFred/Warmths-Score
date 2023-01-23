@@ -556,14 +556,14 @@ MonoBehaviour:
   - The storm... It might've messed with the sacred score... All the colours are
     gone !
   - Oh no the bridge is broken !
-  - I should find some sticks
-  - I should go to north
+  - I should find some wooden plank
+  - I should go to the town
   - Maybe there is someone in the town
   - I should fill the fountain
   - I'm on a island, where is water nearby ?
-  - I should go to the campfire
-  - I need wood
-  - Woods should be in the wood
+  - I should look around the campfire
+  - I need woods to light the campfire
+  - The should be some woods nearby
   dialoguesDone: 
   bulle: {fileID: 2189025852438560827}
   text: {fileID: 1331006231433432637}

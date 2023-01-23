@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
@@ -50,6 +52,13 @@ public class GameManager : MonoBehaviour {
     }
     public void SetState(int newState) {
         SetState((GameStates)newState);
+    }
+    public void StartCinematic(float delay) {
+        StartCoroutine(PlayCinematic(delay));
+    }
+    IEnumerator PlayCinematic(float delay) {
+        yield return new WaitForSecondsRealtime(delay);
+        SetState(GameStates.InGame);
     }
     public void QuitGame() {
         Application.Quit();
