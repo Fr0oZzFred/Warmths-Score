@@ -558,12 +558,6 @@ MonoBehaviour:
   - I should search some water, I can't wear Water
   - I should light this campfire
   - Among us
-  duration:
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
   timeBetweenDialogue: 10
   bulle: {fileID: 2189025852438560827}
   text: {fileID: 1331006231433432637}

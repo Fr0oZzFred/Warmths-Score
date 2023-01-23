@@ -6,7 +6,6 @@ using TMPro;
 public class Dialogue : MonoBehaviour
 {
     [SerializeField] List<string> dialogues;
-    [SerializeField] List<float> duration;
     [SerializeField] float timeBetweenDialogue = 30;
     [SerializeField] GameObject bulle;
     [SerializeField] TextMeshProUGUI text;
@@ -44,7 +43,6 @@ public class Dialogue : MonoBehaviour
     IEnumerator ShowDialogue(int idx) {
         text.SetText(dialogues[idx]);
         bulle.SetActive(true);
-        yield return new WaitForSecondsRealtime(duration[idx]);
-        bulle.SetActive(false);
+        yield return null;
     }
 }
