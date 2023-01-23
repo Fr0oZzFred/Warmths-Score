@@ -36,7 +36,7 @@ public class Tongue : MonoBehaviour
             positions[1] = Vector3.Lerp(positions[0], clickPos, t);
             line.SetPositions(positions);
             if (FirstPrefab) FirstPrefab.transform.position = positions[1];
-            yield return new WaitForSecondsRealtime(delay);
+            yield return new WaitForSeconds(delay);
         }
 
         if (FirstPrefab) Destroy(FirstPrefab);
@@ -45,7 +45,7 @@ public class Tongue : MonoBehaviour
             positions[1] = Vector3.Lerp(positions[0], clickPos, t);
             line.SetPositions(positions);
             if (GrabedPrefab) GrabedPrefab.transform.position = positions[1];
-            yield return new WaitForSecondsRealtime(delay);
+            yield return new WaitForSeconds(delay);
         }
         if (GrabedPrefab) GameManager.Instance.Player.grabbedOBJ = GrabedPrefab;
         GrabedPrefab = null;

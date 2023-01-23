@@ -64,13 +64,13 @@ public class ZoneManager : MonoBehaviour {
     IEnumerator Lerp() {
         for (float t = 0; t <= 1.0f; t += 0.01f) {
             radius = Mathf.Lerp(presets[idx - 1].radius, presets[idx].radius, t);
-            yield return new WaitForSecondsRealtime(delay);
+            yield return new WaitForSeconds(delay);
         }
     }
     IEnumerator LerpSlow() {
         for (float t = 0; t <= 1.0f; t += 0.0001f) {
             radius = Mathf.Lerp(presets[idx - 1].radius, presets[idx].radius, t);
-            yield return new WaitForSecondsRealtime(delay);
+            yield return new WaitForSeconds(delay);
         }
     }
 }

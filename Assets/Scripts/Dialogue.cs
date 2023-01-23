@@ -41,7 +41,7 @@ public class Dialogue : MonoBehaviour
         //}
     }
     IEnumerator ShowDialogueWithDelay(int idx, float delay) {
-        yield return new WaitForSecondsRealtime(delay);
+        yield return new WaitForSeconds(delay);
         text.SetText(dialogues[idx]);
         dialoguesDone[idx] = true;
         bulle.SetActive(true);

@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour {
         StartCoroutine(PlayCinematic(delay));
     }
     IEnumerator PlayCinematic(float delay) {
-        yield return new WaitForSecondsRealtime(delay);
+        yield return new WaitForSeconds(delay);
         SetState(GameStates.InGame);
     }
     public void QuitGame() {
