@@ -3330,6 +3330,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  acceptedItems: 05000000060000000700000008000000
 --- !u!61 &476060841
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4573,6 +4574,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  acceptedItems: 04000000
 --- !u!61 &857047729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5843,7 +5845,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.69242406}
+  m_Offset: {x: 0, y: -0.32149053}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5854,7 +5856,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6, y: 2.884848}
+  m_Size: {x: 6, y: 2.142981}
   m_EdgeRadius: 0
 --- !u!114 &1072994430
 MonoBehaviour:
@@ -8929,7 +8931,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.48595428}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8940,7 +8942,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 2}
+  m_Size: {x: 5, y: 2.9719086}
   m_EdgeRadius: 0
 --- !u!1 &1842119324 stripped
 GameObject:
@@ -9424,6 +9426,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  acceptedItems: 000000000100000002000000
 --- !u!1 &2001127915
 GameObject:
   m_ObjectHideFlags: 0
@@ -9953,10 +9956,6 @@ PrefabInstance:
     - target: {fileID: 5385939351303567920, guid: bc44b577e4afc244fba1d4632904b035, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5385939351303567922, guid: bc44b577e4afc244fba1d4632904b035, type: 3}
-      propertyPath: speed
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5385939351303567925, guid: bc44b577e4afc244fba1d4632904b035, type: 3}
       propertyPath: m_Name
