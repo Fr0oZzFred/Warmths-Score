@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
     void Update() {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
-        diagonal = (Mathf.Abs(horizontal) >= 1.0f && Mathf.Abs(vertical) >= 1.0f);
+        diagonal = ((Mathf.Abs(horizontal) >= 1.0f) && (Mathf.Abs(vertical) >= 1.0f));
         animator.SetFloat("Horizontal", horizontal);
         animator.SetFloat("Vertical", vertical);
 
@@ -65,5 +65,9 @@ public class PlayerController : MonoBehaviour {
     public void UnWear() {
         WearingItem = -1;
         Destroy(grabbedOBJ);
+    }
+    public void SetAnimToIdle() {
+        animator.SetFloat("Horizontal", 0.0f);
+        animator.SetFloat("Vertical", 0.0f);
     }
 }

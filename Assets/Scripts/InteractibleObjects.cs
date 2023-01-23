@@ -6,6 +6,7 @@ public class InteractibleObjects : MonoBehaviour {
     [SerializeField] GameObject prefab = null;
 
     private void OnMouseDown() {
+        if (GameManager.Instance.CurrentGameState != GameManager.GameStates.InGame) return;
         Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         clickPos.z = 0;
         Vector3 d = clickPos - GameManager.Instance.Player.transform.position;
@@ -15,6 +16,7 @@ public class InteractibleObjects : MonoBehaviour {
         Cursor.SetCursor(GameManager.Instance.NormalCursor, Vector2.zero, CursorMode.ForceSoftware);
     }
     private void OnMouseOver() {
+        if (GameManager.Instance.CurrentGameState != GameManager.GameStates.InGame) return;
         Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         clickPos.z = 0;
         Vector3 d = clickPos - GameManager.Instance.Player.transform.position;
@@ -23,6 +25,7 @@ public class InteractibleObjects : MonoBehaviour {
         Cursor.SetCursor(GameManager.Instance.TongueCursor, Vector2.zero,CursorMode.ForceSoftware);
     }
     private void OnMouseExit() {
+        if (GameManager.Instance.CurrentGameState != GameManager.GameStates.InGame) return;
         Cursor.SetCursor(GameManager.Instance.NormalCursor, Vector2.zero, CursorMode.ForceSoftware);
     }
     public void TryToWear(int index) {

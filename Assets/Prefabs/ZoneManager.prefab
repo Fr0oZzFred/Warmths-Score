@@ -79,6 +79,6 @@ MonoBehaviour:
   - radius: 100
     edgeWidth: 0.01
     noiseScale: 1
-    radiusNoiseOffset: 0
+    radiusNoiseOffset: 0.01
   idx: 0
   delay: 0.000001

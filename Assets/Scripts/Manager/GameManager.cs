@@ -4,7 +4,8 @@ public class GameManager : MonoBehaviour {
     public enum GameStates {
         Boot,
         MainMenu,
-        InGame
+        InGame,
+        Pause
     }
     public GameStates CurrentGameState { get; private set; }
     public GameStates PreviousGameState { get; private set; }
@@ -42,6 +43,8 @@ public class GameManager : MonoBehaviour {
                 Player.enabled = false;
                 Player.tongue.enabled = false;
                 Player.dialogue.enabled = false;
+                player.SetAnimToIdle();
+                Cursor.SetCursor(NormalCursor, Vector2.zero, CursorMode.ForceSoftware);
                 break;
         }
     }

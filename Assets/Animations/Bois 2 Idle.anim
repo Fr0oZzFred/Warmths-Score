@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle seau nb
+  m_Name: Bois 2 Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: bb488f9bdebd417459672754361bd74d, type: 3}
+      value: {fileID: 21300000, guid: c6f0c8a3e0b5e524998060973cb5e11d, type: 3}
     - time: 0.33333334
-      value: {fileID: 21300000, guid: dbeb503e79270584081c19521f5fe9f6, type: 3}
+      value: {fileID: 21300000, guid: 36468d9397cee464db75f4684d6d922f, type: 3}
     - time: 0.6666667
-      value: {fileID: 21300000, guid: 7731443c031eb12499f8d58a20b4e612, type: 3}
+      value: {fileID: 21300000, guid: 3f9f05b0ce935aa42b0cce2e440008e9, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,9 +44,9 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: bb488f9bdebd417459672754361bd74d, type: 3}
-    - {fileID: 21300000, guid: dbeb503e79270584081c19521f5fe9f6, type: 3}
-    - {fileID: 21300000, guid: 7731443c031eb12499f8d58a20b4e612, type: 3}
+    - {fileID: 21300000, guid: c6f0c8a3e0b5e524998060973cb5e11d, type: 3}
+    - {fileID: 21300000, guid: 36468d9397cee464db75f4684d6d922f, type: 3}
+    - {fileID: 21300000, guid: 3f9f05b0ce935aa42b0cce2e440008e9, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
